@@ -3,6 +3,9 @@ package com.example.fundamentospringboot.model.entidades;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,13 +22,17 @@ public class Produto {
 
     @Column
     @NonNull
+    @NotBlank//validação para esse valor ser diferente de vazio
     private String nome;
 
     @Column
     @NonNull
+    @Min(0)//validação para preco minimo ser 0
     private double preco;
 
     @Column
     @NonNull
+    @Min(0)
+    @Max(1)
     private double desconto;
 }
