@@ -27,6 +27,11 @@ public class ProdutoController {
         return produtoRepository.findAll();
     }
 
+    @GetMapping(path = "/nome/{parteNome}")
+    public Iterable<Produto> obterProdutosPorNome(@PathVariable String parteNome) {
+        return produtoRepository.findByNomeContainingIgnoreCase(parteNome);
+    }
+
     @GetMapping(path = "/{id}")
     public Optional<Produto> obterProdutoPorId(@PathVariable int id) {
         return produtoRepository.findById(id);
