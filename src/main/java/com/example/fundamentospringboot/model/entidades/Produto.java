@@ -20,4 +20,12 @@ public class Produto {
     @Column
     @NonNull
     private String nome;
+
+    @Column
+    @NonNull
+    private double preco;
+
+    @Column
+    @NonNull
+    private double desconto;
 }
