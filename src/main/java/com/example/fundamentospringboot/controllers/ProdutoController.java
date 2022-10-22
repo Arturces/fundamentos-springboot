@@ -19,7 +19,7 @@ public class ProdutoController {
     @RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT})
     public @ResponseBody Produto novoProduto(@Valid Produto produto) {
         produtoRepository.save(produto);
-        return produto; 
+        return produto;
     }
 
     @GetMapping
@@ -37,4 +37,9 @@ public class ProdutoController {
         produtoRepository.save(produto);
         return produto;
     }*/
+
+    @DeleteMapping(path = "/{id}")
+    public void excluirProduto(@PathVariable int id){
+        produtoRepository.deleteById(id);
+    }
 }
