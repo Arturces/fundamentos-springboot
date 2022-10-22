@@ -13,7 +13,12 @@ public class ClienteController {
     }
 
     @GetMapping("/{id}")
-    public Cliente ObterCLientePorId1(@PathVariable  Long id){
+    public Cliente ObterclientePorId1(@PathVariable  Long id){
         return new Cliente(id, "Artur", "056,501,405-61");
+    }
+
+    @GetMapping
+    public Cliente obterClienteporId2(@RequestParam(name = "id", defaultValue = "1") Long id){
+        return new Cliente(id,"César", "239.704.305-00"); 
     }
 }
