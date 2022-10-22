@@ -1,4 +1,4 @@
-package com.example.fundamentospringboot.models;
+package com.example.fundamentospringboot.model.entidades;
 
 public class Cliente {
 

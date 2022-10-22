@@ -1,6 +1,6 @@
 package com.example.fundamentospringboot.controllers;
 
-import com.example.fundamentospringboot.models.Cliente;
+import com.example.fundamentospringboot.model.entidades.Cliente;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,6 +19,6 @@ public class ClienteController {
 
     @GetMapping
     public Cliente obterClienteporId2(@RequestParam(name = "id", defaultValue = "1") Long id){
-        return new Cliente(id,"César", "239.704.305-00"); 
+        return new Cliente(id,"César", "239.704.305-00");
     }
 }
