@@ -28,11 +28,11 @@ public class Produto {
     @Column
     @NonNull
     @Min(0)//validação para preco minimo ser 0
-    private double preco;
+    private Double preco;
 
     @Column
     @NonNull
     @Min(0)
     @Max(1)
-    private double desconto;
+    private Double desconto;
 }
